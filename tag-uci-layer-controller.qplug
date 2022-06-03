@@ -2,7 +2,7 @@
 PluginInfo = {
   ['Name'] = "TAG~UCI Layer Controller",
   ['Version'] = "1.0",
-  ['BuildVersion'] = "1.0.0.2",
+  ['BuildVersion'] = "1.0.0.3",
   ['Id'] = "b37b2499-7d80-4fb4-8cff-169fc334669a",
   ['Description'] = "",
   ['ShowDebug'] = false
@@ -18,18 +18,6 @@ function GetPrettyName(props)
   return ('TAG\nUCI Layer Controller\n[%s]'):format(PluginInfo.Version)
 end
 
--- Optional function used if plugin has multiple pages
-function GetPages(props)
-  local pages = {}
-  return pages
-end
-
--- Optional function to define model if plugin supports more than one model
-function GetModel(props)
-  local model = {}
- return model
-end
-
 -- Define User configurable Properties of the plugin
 function GetProperties()
   local props = {}
@@ -41,29 +29,6 @@ function GetProperties()
       ['Value'] = 5
   })
   return props
-end
-
--- Optional function to define pins on the plugin that are not connected to a Control
-function GetPins(props)
-  local pins = {}
-  return pins
-end
-
--- Optional function to update available properties when properties are altered by the user
-function RectifyProperties(props)
-  return props
-end
-
--- Optional function to define components used within the plugin
-function GetComponents(props)
-  local components = {}
-  return components
-end
-
--- Optional function to define wiring of components used within the plugin
-function GetWiring(props)
-  local wiring = {}
-  return wiring
 end
 
 -- Defines the Controls used within the plugin
