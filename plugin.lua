@@ -1,22 +1,17 @@
--- Basic Framework Plugin
--- by QSC
--- October 2020
-
 -- Information block for the plugin
 --[[ #include "src/info.lua" ]]
 
 -- Define the color of the plugin object in the design
 function GetColor(props)
-  return { 102, 102, 102 }
+  return {51, 51, 51}
 end
 
 -- The name that will initially display when dragged into a design
 function GetPrettyName(props)
-  return "My First Plugin, version " .. PluginInfo.Version
+  return ('TAG\nUCI Layer Controller\n[%s]'):format(PluginInfo.Version)
 end
 
 -- Optional function used if plugin has multiple pages
-PageNames = { "Control", "Setup" }  --List the pages within the plugin
 function GetPages(props)
   local pages = {}
   --[[ #include "src/pages.lua" ]]

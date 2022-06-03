@@ -1,6 +1,7 @@
 table.insert(props, {
-  Name = "Debug Print",
-  Type = "enum",
-  Choices = {"None", "Tx/Rx", "Tx", "Rx", "Function Calls", "All"},
-  Value = "None"
+    ['Name'] = "# Layers",
+    ['Type'] = "integer",
+    ['Min']  = 1,
+    ['Max'] = 200,
+    ['Value'] = 5
 })

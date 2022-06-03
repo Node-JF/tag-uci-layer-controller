@@ -1,8 +1,8 @@
 PluginInfo = {
-  Name = "",
-  Version = "0.0",
-  BuildVersion = "0.0.0.0",
-  Id = "",
-  Author = "Jason Foord (TAG)",
-  Description = ""  
+  ['Name'] = "TAG~UCI Layer Controller",
+  ['Version'] = "1.0",
+  ['BuildVersion'] = "1.0.0.2",
+  ['Id'] = "b37b2499-7d80-4fb4-8cff-169fc334669a",
+  ['Description'] = "",
+  ['ShowDebug'] = false
 }
