@@ -44,32 +44,32 @@ The Page of the selected UCI Name.
 
 #### Layer Controls
 
-> ##### Parent Layer
+##### Parent Layer
 
-> The layer that is referenced to determine the visibility and transition inheritance of *this* layer.
+The layer that is referenced to determine the visibility and transition inheritance of *this* layer.
 
-> ##### Layer Name
+##### Layer Name
 
-> The layer to be affected by this row.
+The layer to be affected by this row.
 
-> ##### In
+##### In
 
-> The discrete *In* transition for this layer.
+The discrete *In* transition for this layer.
 
->> This transtition will be used for layers that have this layer configured as a parent, if *this* layer triggers the visibility change.
+> This transtition will be used for layers that have this layer configured as a parent, if *this* layer triggers the visibility change.
 
-> ##### Out
+##### Out
 
-> The discrete *Out* transition for this layer.
+The discrete *Out* transition for this layer.
 
->> This transtition will be used for layers that have *this* layer configured as a parent, if *this* layer triggers the visibility change.
+> This transtition will be used for layers that have *this* layer configured as a parent, if *this* layer triggers the visibility change.
 
-> ##### Show
+##### Show
 
-> Toggles the intended visibility of *this* layer.
+Toggles the intended visibility of *this* layer.
 
->> If a parent layer is configured, the visibility of this layer is determined through a logical ***AND*** operation of the parent's *visibility* state and *this* layer's 'show' state.
+> If a parent layer is configured, the visibility of this layer is determined through a logical ***AND*** operation of the parent's *visibility* state and *this* layer's 'show' state.
 
-> ##### Visible
+##### Visible
 
-> If this layer is currently visible.
+If this layer is currently visible.
