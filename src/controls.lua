@@ -47,8 +47,30 @@ table.insert(ctrls, {
 })
 
 table.insert(ctrls, {
+  ['Name'] = 'layer.delay.in',
+  ['ControlType'] = "Knob",
+  ['ControlUnit'] = "Float",
+  ['Min'] = 0,
+  ['Max'] = 1,
+  ['UserPin'] = true,
+  ['PinStyle'] = "Both",
+  ['Count'] = props['# Layers'].Value
+})
+
+table.insert(ctrls, {
   ['Name'] = 'layer.transition.out',
   ['ControlType'] = "Text",
+  ['UserPin'] = true,
+  ['PinStyle'] = "Both",
+  ['Count'] = props['# Layers'].Value
+})
+
+table.insert(ctrls, {
+  ['Name'] = 'layer.delay.out',
+  ['ControlType'] = "Knob",
+  ['ControlUnit'] = "Float",
+  ['Min'] = 0,
+  ['Max'] = 1,
   ['UserPin'] = true,
   ['PinStyle'] = "Both",
   ['Count'] = props['# Layers'].Value

@@ -1,5 +1,7 @@
 # TAG UCI Layer Controller
 
+See [Change log](/CHANGELOG.md)
+
 This is a Q-SYS Plugin intended to provide an alternative to the native *UCI Layer Controller* that is more feature-rich.
 > This plugin is intended to provide *only* this extended functionality. Further functionality such as *radio groups* should be achieved through using a *selector* that drives the control pins of the desired layers.
 
@@ -58,11 +60,23 @@ The discrete *In* transition for this layer.
 
 > This transtition will be used for layers that have this layer configured as a parent, if *this* layer triggers the visibility change.
 
+##### Delay In
+
+The delay applied when showing this layer.
+
+> This delay will be used for layers that have this layer configured as a parent, **plus** the delay of the child, if *this* layer triggers the visibility change. This allows for delay inheritance, as well as unique delays for child layers.
+
 ##### Out
 
 The discrete *Out* transition for this layer.
 
 > This transtition will be used for layers that have *this* layer configured as a parent, if *this* layer triggers the visibility change.
+
+##### Delay Out
+
+The delay applied when hiding this layer.
+
+> This delay will be used for layers that have this layer configured as a parent, **plus** the delay of the child, if *this* layer triggers the visibility change. This allows for delay inheritance, as well as unique delays for child layers.
 
 ##### Show
 

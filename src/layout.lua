@@ -52,8 +52,8 @@ layout["page.name"] = {
 }
 
 y = y + 18 + 18
-
-local x = {0, 42, 174, 306, 372, 438, 476}
+ -- 38
+local x = {0, 42, 174, 306, 372, 438,504, 570, 608}
 
 table.insert(graphics, {
   ['Type'] = "Label",
@@ -86,10 +86,9 @@ table.insert(graphics, {
   ['Position'] = {x[4], y},
   ['Size'] = {64, 16}
 })
-
 table.insert(graphics, {
   ['Type'] = "Label",
-  ['Text'] = "Out",
+  ['Text'] = "Delay In",
   ['HTextAlign'] = "Center",
   ['Position'] = {x[5], y},
   ['Size'] = {64, 16}
@@ -97,9 +96,25 @@ table.insert(graphics, {
 
 table.insert(graphics, {
   ['Type'] = "Label",
-  ['Text'] = "Show",
+  ['Text'] = "Out",
   ['HTextAlign'] = "Center",
   ['Position'] = {x[6], y},
+  ['Size'] = {64, 16}
+})
+
+table.insert(graphics, {
+  ['Type'] = "Label",
+  ['Text'] = "Delay Out",
+  ['HTextAlign'] = "Center",
+  ['Position'] = {x[7], y},
+  ['Size'] = {64, 16}
+})
+
+table.insert(graphics, {
+  ['Type'] = "Label",
+  ['Text'] = "Show",
+  ['HTextAlign'] = "Center",
+  ['Position'] = {x[8], y},
   ['Size'] = {36, 16}
 })
 
@@ -143,23 +158,37 @@ for layer = 1, props['# Layers'].Value do
       ['Size'] = sizes.Transition,
   }
 
+  layout[('layer.delay.in %d'):format(layer)] = {
+    ['PrettyName'] = ('Layer %d~Delay In'):format(layer),
+    ['Style'] = "Text",
+    ['Position'] = {x[5], y},
+    ['Size'] = sizes.Transition,
+}
+
   layout[('layer.transition.out %d'):format(layer)] = {
       ['PrettyName'] = ('Layer %d~Transition Out'):format(layer),
       ['Style'] = "ComboBox",
-      ['Position'] = {x[5], y},
+      ['Position'] = {x[6], y},
       ['Size'] = sizes.Transition,
   }
+
+  layout[('layer.delay.out %d'):format(layer)] = {
+    ['PrettyName'] = ('Layer %d~Delay Out'):format(layer),
+    ['Style'] = "Text",
+    ['Position'] = {x[7], y},
+    ['Size'] = sizes.Transition,
+}
 
   layout[('layer.show %d'):format(layer)] = {
       ['PrettyName'] = ('Layer %d~Show'):format(layer),
       ['Style'] = "Button",
-      ['Position'] = {x[6], y}
+      ['Position'] = {x[8], y}
   }
 
   layout[('layer.visible %d'):format(layer)] = {
       ['PrettyName'] = ('Layer %d~Visible'):format(layer),
       ['Style'] = "Led",
-      ['Position'] = {x[7], y}
+      ['Position'] = {x[9], y}
   }
 
   y = y + 18
