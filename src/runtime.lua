@@ -2,7 +2,10 @@ rapidjson = require("rapidjson")
 
 Transitions = {"none", "fade", "left", "right", "bottom", "top"}
 
-function Initialize() GetUCIs() end
+function Initialize()
+    GetUCIs()
+    Timer.CallAfter(UpdateAll, 5)
+end
 
 function ResetPageList()
     Controls["page.name"].String = rapidjson.encode({
